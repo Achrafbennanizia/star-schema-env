@@ -41,3 +41,29 @@ Zusätzlich gibt es eine Staging-Tabelle:
 createdb star_schema_env
 psql -d star_schema_env -f schema.sql
 ```
+### 2. Demo-Daten einspielen
+Variante A: direkte Dimension + Fakten (schnell, zum Testen):
+```bash
+psql -d star_schema_env -f sample_data.sql
+```
+Variante B: ETL-Demo über Staging:
+```bash
+psql -d star_schema_env -f etl_demo.sql
+```
+### 3. Beispiel-Queries ausführen
+```bash
+psql -d star_schema_env -f queries.sql
+```
+Oder interaktiv:
+```bash
+psql -d star_schema_env
+-- dann z. B.:
+-- \i queries.sql
+```
+
+### Lernziele
+
+- Verständnis von Dimensionstabellen und Faktentabellen
+- Aufbau eines einfachen Star-Schemas
+- Grundidee von ETL (Extract–Transform–Load) mit Staging-Tabelle
+- Schreiben von analytischen SQL-Queries auf einem Star-Schema
