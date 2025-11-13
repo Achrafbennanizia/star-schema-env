@@ -41,4 +41,3 @@ Zusätzlich gibt es eine Staging-Tabelle:
 createdb star_schema_env
 psql -d star_schema_env -f schema.sql
 ```
-# star-schema-env
